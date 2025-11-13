@@ -8,8 +8,8 @@
 name: Release
 'on':
   push:
-    tags:
-      - '*'
+    branches:
+      - 'main'
 
 defaults:
   run:

@@ -37,3 +37,7 @@
     chdir: "{{ nemesis_install_dir }}"
   register: nemesis_start
   ignore_errors: true
+
+- name: Access Nemesis
+  ansible.builtin.debug:
+    msg: "Access Nemesis at http://{{ ansible_host }}:{{ nemesis_port }} -> Basic Auth with n:n"
