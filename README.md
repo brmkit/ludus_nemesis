@@ -39,17 +39,8 @@ ludus:
       block_internet: false
     roles:
       - geerlingguy.docker
-      - ludus_nemesis
-    role_vars:
-      docker_daemon_options:
-        min-api-version: '1.24'
-      docker_edition: ce
-      docker_users:
-        - localuser
+      - brmkit.ludus_nemesis
 ```
-
-> [!WARNING]
-> There is a issue with the last version of Docker and the traefik container in Nemesis, so you must explicitly set `min-api-version` in the daemon config to avoid failures. [\[1\]](https://www.docker.com/blog/docker-engine-version-29/) [\[2\]](https://community.traefik.io/t/traefik-stops-working-it-uses-old-api-version-1-24/29019/11)
 
 ## License
 
